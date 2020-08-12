@@ -19,8 +19,7 @@ exports.getByName = async(name) => {
 
 // Busca um produto baseado no ID
 exports.getById = async(id) => {
-	const res = await Food
-	.findById(id);
+	const res = await Food.findById(id);
 	return res
 }
 
@@ -45,6 +44,6 @@ exports.update = async(id, data) => {
 
 // Deleta um produto
 exports.delete = async(id) => {
-	const res = await Food.findOneAndRemove(id);
+	const res = await Food.findOneAndRemove({_id: id});
 	return res;
 }

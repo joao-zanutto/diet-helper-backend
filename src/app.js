@@ -18,6 +18,7 @@ const Product = require('./models/product');
 const Order = require('./models/order');
 const Service = require('./models/service');
 const Food = require('./models/food');
+const Meal = require('./models/meal');
 
 
 // Carrega as rotas de conexão
@@ -27,6 +28,7 @@ const customer = require('./routes/customers');
 const order = require('./routes/orders')
 const service = require('./routes/services')
 const foods = require('./routes/foods');
+const meals = require('./routes/meals');
 
 
 // Aplica o bodyParser no app
@@ -40,5 +42,7 @@ app.use('/customers', customer);
 app.use('/orders', order);
 app.use('/services', service);
 app.use('/foods', foods);
+app.use('/meals', meals);
+
 
 module.exports = app;
