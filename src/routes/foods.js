@@ -10,6 +10,6 @@ router.put('/:id', controller.put);
 router.delete('/:id', controller.delete);
 router.get('/', controller.get);
 router.get('/:name', controller.getByName);
-router.get('/admin/:id', controller.getById);
+router.get('/id/:id', controller.getById);
 
 module.exports = router;

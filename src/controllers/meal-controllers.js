@@ -22,7 +22,6 @@ exports.getById = async(req, res, next) => {
 
 exports.post = async(req, res, next) => {
 	try{
-		console.log(req.body)
 		var data = await repository.create(req.body)
 		res.status(201).send({ message: 'refeição ok'});
 	} catch(e) {

@@ -13,20 +13,12 @@ const router = express.Router();
 mongoose.connect(config.connectionString, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Carrega os modelos da base de dados
-const Customer = require('./models/customer');
-const Product = require('./models/product');
-const Order = require('./models/order');
-const Service = require('./models/service');
 const Food = require('./models/food');
 const Meal = require('./models/meal');
 
 
 // Carrega as rotas de conexão
 const index = require('./routes/index');
-const product = require('./routes/products');
-const customer = require('./routes/customers');
-const order = require('./routes/orders')
-const service = require('./routes/services')
 const foods = require('./routes/foods');
 const meals = require('./routes/meals');
 
@@ -37,10 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Redireciona as rotas para os arquivos de rotas
 app.use('/', index);
-app.use('/products', product);
-app.use('/customers', customer);
-app.use('/orders', order);
-app.use('/services', service);
 app.use('/foods', foods);
 app.use('/meals', meals);
 

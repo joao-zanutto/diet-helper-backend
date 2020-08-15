@@ -18,6 +18,24 @@ const schema = new Schema({
 			required: true
 		}
 	}],
+	stats: {
+		carboCount: {
+			type: Number,
+			required: true
+		},
+		protCount: {
+			type: Number,
+			required: true
+		},
+		fatCount: {
+			type: Number,
+			required: true
+		},
+		calories: {
+			type: Number,
+			required: true
+		},
+	}
 });
 
 module.exports = mongoose.model('Meal', schema);

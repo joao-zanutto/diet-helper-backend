@@ -9,6 +9,10 @@ const schema = new Schema({
 		index: true,
 		unique: true
 	},
+	quanti: {
+		type: String,
+		required: true,
+	},
 	carboCount: {
 		type: Number,
 		required: true,
@@ -21,10 +25,11 @@ const schema = new Schema({
 		type: Number,
 		required: true
 	},
-	quanti: {
-		type: String,
-		required: true,
+	calories: {
+		type: Number,
+		required: true
 	}
+	
 });
 
 module.exports = mongoose.model('Food', schema);
